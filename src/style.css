@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* background: linear-gradient(to right, #00AAFF, #00FF6C); */
+    height: 100vh;
+    background-color: #99ccff;
+    background-image:
+            radial-gradient(at 73% 71%, hsla(35, 69%, 63%, 1) 0px, transparent 50%),
+            radial-gradient(at 55% 26%, hsla(91, 86%, 78%, 1) 0px, transparent 50%),
+            radial-gradient(at 95% 19%, hsla(237, 70%, 62%, 1) 0px, transparent 50%),
+            radial-gradient(at 6% 48%, hsla(105, 64%, 70%, 1) 0px, transparent 50%),
+            radial-gradient(at 76% 15%, hsla(81, 81%, 66%, 1) 0px, transparent 50%),
+            radial-gradient(at 65% 87%, hsla(322, 84%, 65%, 1) 0px, transparent 50%),
+            radial-gradient(at 91% 82%, hsla(242, 89%, 75%, 1) 0px, transparent 50%);
+}
+
+.calculator {
+    /* margin-top: 2rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator-body {
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.calculator-body>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-body>button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.calculator-body > button:nth-child(17) {
+    border-radius: 0 0 0 1rem;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-wrap: break-all;
+    border-radius: 0 1rem 0 0;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
